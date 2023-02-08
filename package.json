@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve functions",
+    "build": "NODE_ENV=development ./node_modules/.bin/netlify-lambda build functions"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +14,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
+    "netlify-cli": "^12.10.0",
+    "netlify-lambda": "^2.0.15",
     "nodemon": "^2.0.19",
+    "serverless-http": "^3.1.1",
     "uuid": "^9.0.0"
   }
 }
